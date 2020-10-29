@@ -4,8 +4,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 	$num2 = $_GET['num2'];
 	$operator = $_GET['operation'];
 	
-	echo($op);
-	exit();
 	if ($operator === "+" || $operator === "-" || $operator === "*" || $operator === "/" || $operator === "**") {
 		$n1 = floatval($num1);
 		$n2 = floatval($num2);
