@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 		exit();
 	}
 	
-} else if {$ SERVER['REQUEST_METHOD'] == 'HEAD') {
+} else if {$_SERVER['REQUEST_METHOD'] == 'HEAD') {
 	exit();
 } else {
 	http_response_code(405);
