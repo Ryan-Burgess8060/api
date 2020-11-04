@@ -4,7 +4,7 @@ if {$ SERVER['REQUEST_METHOD'] == 'GET') {
 	$headers = apache_request_headers();
 	var_dump($headers);
 	
-	$token = headers['Authorization'];
+	$token = $headers['Authorization'];
 	
 	if ($token !== 'Basic alskdjgaedaertgjasdgj') {
 		http_response_code(401);
