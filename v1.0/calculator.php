@@ -3,7 +3,16 @@
         $num1 = $_GET['num1'];
         $num2 = $_GET['num2'];
         $operator = $_GET['operation'];
-        
+		$headers = apache_request_headers();
+		var_dump($headers);
+	
+		$token = $headers['Authorization'];
+	
+		if ($token !== 'Basic alskdjgaedaertgjasdgj') {
+			http_response_code(401);
+			exit();
+	
+		
         if ($operator === "+" || $operator === "-" || $operator === "*" || $operator === "/" || $operator === "**"){
             $n1 = floatval($num1);
             $n2 = floatval($num2);
