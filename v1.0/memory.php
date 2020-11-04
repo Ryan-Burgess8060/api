@@ -1,5 +1,5 @@
 <?php
-if $ SERVER['REQUEST_METHOD'] == 'GET') {
+if ($ SERVER['REQUEST_METHOD'] == 'GET') {
 	
 	$headers = apache_request_headers();
 	var_dump($headers);
@@ -19,10 +19,10 @@ if $ SERVER['REQUEST_METHOD'] == 'GET') {
 		exit();
 	}
 
-} else if {$ SERVER['REQUEST_METHOD'] == 'HEAD') {
+} else if ($ SERVER['REQUEST_METHOD'] == 'HEAD') {
 	exit()
 
-} else if {$ SERVER['REQUEST_METHOD'] == 'POST') {
+} else if ($ SERVER['REQUEST_METHOD'] == 'POST') {
 	if (array_key_exists('val', $_POST)) {
 		$val = $_POST['val'];
 		setcookie('mem', $val);
@@ -33,7 +33,7 @@ if $ SERVER['REQUEST_METHOD'] == 'GET') {
 		exit();
 	}
 
-} else if {$ SERVER['REQUEST_METHOD'] == 'PUT') {
+} else if ($ SERVER['REQUEST_METHOD'] == 'PUT') {
 	$current = 0;
 	if (array_key_exists('mem', $_COOKIE)) {
 		$current = $_COOKIE['mem'];
@@ -62,7 +62,7 @@ if $ SERVER['REQUEST_METHOD'] == 'GET') {
 		exit();
 	}
 
-} else if {$ SERVER['REQUEST_METHOD'] == 'DELETE') {
+} else if ($ SERVER['REQUEST_METHOD'] == 'DELETE') {
 	setcookie("mem", "", time() - 3600);
 	exit();
 
