@@ -1,15 +1,15 @@
 <?php
 if ($ SERVER['REQUEST_METHOD'] == 'GET') {
 	
-	$headers = apache_request_headers();
-	var_dump($headers);
+	// $headers = apache_request_headers();
+	// var_dump($headers);
 	
-	$token = $headers['Authorization'];
+	// $token = $headers['Authorization'];
 	
-	if ($token !== 'Basic alskdjgaedaertgjasdgj') {
-		http_response_code(401);
-		exit();
-	}
+	// if ($token !== 'Basic alskdjgaedaertgjasdgj') {
+		// http_response_code(401);
+		// exit();
+	// }
 	
 	if (array_key_exists('mem', $_COOKIE)) {
 		echo $_COOKIE['mem'];
