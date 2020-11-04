@@ -1,5 +1,5 @@
 <?php
-if {$ SERVER['REQUEST_METHOD'] == 'GET') {
+if $ SERVER['REQUEST_METHOD'] == 'GET') {
 	
 	$headers = apache_request_headers();
 	var_dump($headers);
