@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 	}
 
 } else if ($_SERVER['REQUEST_METHOD'] == 'HEAD') {
-	exit()
+	exit();
 
 } else if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if (array_key_exists('val', $_POST)) {
