@@ -28,7 +28,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 		setcookie('mem', $val);
 		echo $val;
 		exit();
-	}// } else {
+	}
+	// } else {
 		// http_response_code(400);
 		// exit();
 	// }
