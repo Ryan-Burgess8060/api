@@ -28,11 +28,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 		setcookie('mem', $val);
 		echo $val;
 		exit();
+	} else {
+		http_response_code(400);
+		exit();
 	}
-	// } else {
-		// http_response_code(400);
-		// exit();
-	// }
 
 } else if ($_SERVER['REQUEST_METHOD'] == 'PUT') {
 	$current = 0;
