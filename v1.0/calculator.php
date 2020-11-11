@@ -1,6 +1,17 @@
 <?php
     if($_SERVER['REQUEST_METHOD'] == 'GET') {
-        $num1 = $_GET['num1'];
+        
+		$headers = apache_request_headers();
+		var_dump($headers);
+		
+		$token = $headers['Authorization'];
+		
+		if ($token !== 'Basic alskdjgaedaertgjasdgj') {
+			http_response_code(401);
+			exit();
+		}
+		
+		$num1 = $_GET['num1'];
         $num2 = $_GET['num2'];
         $operator = $_GET['operation'];
 		$headers = apache_request_headers();
