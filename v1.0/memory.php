@@ -23,6 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 	exit();
 
 } else if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+	echo $_POST['val'];
 	if (array_key_exists('val', $_POST)) {
 		$val = $_POST['val'];
 		setcookie('mem', $val);
