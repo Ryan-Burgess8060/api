@@ -24,15 +24,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
 } else if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	echo $_POST['val'];
-	if (array_key_exists('val', $_POST)) {
-		$val = $_POST['val'];
-		setcookie('mem', $val);
-		echo $val;
-		exit();
-	} else {
-		http_response_code(400);
-		exit();
-	}
+	// if (array_key_exists('val', $_POST)) {
+		// $val = $_POST['val'];
+		// setcookie('mem', $val);
+		// echo $val;
+		// exit();
+	// } else {
+		// http_response_code(400);
+		// exit();
+	// }
 
 } else if ($_SERVER['REQUEST_METHOD'] == 'PUT') {
 	$current = 0;
