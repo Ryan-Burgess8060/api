@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 	
 	// $token = $headers['Authorization'];
 	
-	// if ($token !== 'Basic alskdjgaedaertgjasdgj') {
+	// if ($token !== 'Basic ') {
 		// http_response_code(401);
 		// exit();
 	// }
