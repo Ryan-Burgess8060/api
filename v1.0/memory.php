@@ -1,15 +1,16 @@
 <?php
+$headers = apache_request_headers();
+var_dump($headers);
+
+$token = $headers['Authorization'];
+
+if ($token !== 'Basic ') {
+	http_response_code(401);
+	exit();
+}
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 	
-	// $headers = apache_request_headers();
-	// var_dump($headers);
 	
-	// $token = $headers['Authorization'];
-	
-	// if ($token !== 'Basic ') {
-		// http_response_code(401);
-		// exit();
-	// }
 	
 	if (array_key_exists('mem', $_COOKIE)) {
 		echo $_COOKIE['mem'];
