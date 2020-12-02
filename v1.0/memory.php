@@ -8,9 +8,6 @@ if ($token !== 'Basic token') {
 	exit();
 }
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-	
-	
-	
 	if (array_key_exists('mem', $_COOKIE)) {
 		echo $_COOKIE['mem'];
 		exit();
